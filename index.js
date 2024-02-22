@@ -269,7 +269,7 @@ exports.handler = async (event) => {
             throw new Error(`It's not this player's turn or the player ID ${playerId} not found in game ${gameId}`);
         }
 
-        const { actionSuccessful, updatedPlayers, updatedPot, updatedHighestBet } = PokerBetting.raise(
+        const { actionSuccessful, updatedPlayers, updatedPot, updatedHighestBet } = raise(
             playerId,
             raiseAmount,
             [...game.players], // Pass a copy of the players array
